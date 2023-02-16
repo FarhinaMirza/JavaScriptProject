@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Javascript practical</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <input type="text" id="txt1" name="txt1"/>
+        <input type="text" id="txt2" name="txt2"/>
+        <label id="lbl1"></label>
+        <br> <br>
+        <input type="button" onclick="btnalert()" id="btn1" name="btn1" value="print with alert">
+        <input type="button" onclick="btndocument()" id="btn2" name="btn2" value="print with document"/>
+        <input type="button" onclick="btnconsole()" id="btn3" name="btn3" value="print with console"/>
+        <input type="button" onclick="btnlabel()" id="btn4" name="btn4" value="print with label"/>
+        <input type="button" onclick="btnSumClick()" id="sumbtn" name="sumbtn" value="Sum"/>
+        <br> <br>
+        <input type="radio" onclick="btnRdoClick()" id="rdoMale" name="gender" value="Male"/>
+        <label for="rdoMale">Male</label>
+        <input type="radio" onclick="btnRdoClick()" id="rdoFemale" name="gender" value="Female"/>
+        <label for="rdoFemale">Female</label>
+        <br> <br>
+        <select id="dayDrop" name="dayDrop">
+            <option value="dd">dd</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="16">16</option>
+        </select>
+        <select id="monthDrop" name="monthDrop">
+            <option value="mm">mm</option>
+            <option value="Jan">Jan</option>
+            <option value="Feb">Feb</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="Sept">Sept</option>
+            <option value="Oct">Oct</option>
+            <option value="Nov">Nov</option>
+            <option value="Dec">Dec</option>
+        </select>
+        <select id="YearDrop" name="YearDrop">
+            <option value="yyyy">yyyy</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+        </select>
+        <label id="lbl2"></label> <br> <br>
+        <input type="button" onclick="btnDropClick()" id="Datebtn" name="Datebtn" value="Click Here"/>
+        <br> <br> <br>
+        
+        <script type="text/javascript">
+
+            //document.write("Hello");
+
+            function btnalert()
+            {
+                alert("hi");
+            }
+
+            function btndocument() {
+                document.write("hello");
+            }
+            function btnconsole() {
+                console.log("hello");
+            }
+            function btnlabel() {
+                lbl1.innerHTML = "hello";
+            }
+            function btnSumClick() {
+                lbl1.innerHTML = parseInt(txt1.value) + parseInt(txt2.value);
+                // console.log(a);
+            }
+            function btnRdoClick() {
+
+                var g = document.getElementsByName("gender");
+                if (rdoMale.checked === true) {
+                    lbl1.style.color = "green";
+                    lbl1.innerHTML = "You are selected Male";
+                } else if (rdoFemale.checked === true) {
+                    lbl1.style.color = "orange";
+                    lbl1.innerHTML = "you are selected Female";
+                } else {
+                    lbl1.style.color = "red";
+                    lbl1.innerHTML = "plz selected any one option";
+                }
+                //console.log(g);
+
+            }
+            function btnDropClick(){
+                lbl2.innerHTML=dayDrop.value+" "+monthDrop.value+" "+YearDrop.value;
+            }
+
+        </script>
+    </body>
+</html>
